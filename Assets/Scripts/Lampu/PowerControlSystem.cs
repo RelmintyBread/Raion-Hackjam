@@ -1,36 +1,97 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PowerControlSystem : MonoBehaviour
 {
+    [Header("Rooms")]
     public Room[] rooms;
-    private bool isPanelActive = false; // baru bisa pencet 1/2/3 kalau ini true
+
+    [Header("Limit")]
+    public int maxActiveRooms = 2;
+
+    [Header("UI Panel")]
+    public GameObject controlPanelUI;
+    public Button[] roomButtons;
+    public Button closeButton;
+
+    [Header("Camera")]
+    public CameraFollowCursor cameraFollow; // drag Main Camera ke sini
+
+    private bool panelOpen = false;
 
     void Start()
     {
-        Debug.Log("PowerControlSystem aktif. Jumlah rooms: " + rooms.Length);
-        for (int i = 0; i < rooms.Length; i++)
+        if (controlPanelUI != null)
+            controlPanelUI.SetActive(false);
+
+        for (int i = 0; i < roomButtons.Length; i++)
         {
-            Debug.Log("Room index " + i + ": " + (rooms[i] != null ? rooms[i].roomName : "NULL"));
+            int index = i;
+            roomButtons[i].onClick.AddListener(() => TryToggleRoom(index));
         }
+
+        if (closeButton != null)
+            closeButton.onClick.AddListener(ClosePanel);
     }
 
     void OnMouseDown()
     {
-        isPanelActive = !isPanelActive; // toggle aktif/nggak tiap diklik
-        Debug.Log("Generator diklik! Panel aktif: " + isPanelActive);
+        if (panelOpen) ClosePanel();
+        else OpenPanel();
     }
 
-    void Update()
+    void OpenPanel()
     {
-        if (!isPanelActive) return; // kalau belum diklik, skip semua logic di bawah
+        panelOpen = true;
+        controlPanelUI.SetActive(true);
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && rooms.Length > 0)
-            rooms[0].ToggleRoom();
+        if (cameraFollow != null)
+            cameraFollow.LockCamera(); // kunci kamera pas panel dibuka
+    }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && rooms.Length > 1)
-            rooms[1].ToggleRoom();
+    public void ClosePanel()
+    {
+        panelOpen = false;
+        if (controlPanelUI != null)
+            controlPanelUI.SetActive(false);
 
-        if (Input.GetKeyDown(KeyCode.Alpha3) && rooms.Length > 2)
-            rooms[2].ToggleRoom();
+        if (cameraFollow != null)
+            cameraFollow.UnlockCamera(); // lepas kunci pas panel ditutup
+    }
+
+    public void TryToggleRoom(int index)
+    {
+        if (index < 0 || index >= rooms.Length) return;
+
+        Room targetRoom = rooms[index];
+
+        if (targetRoom.IsAnyLightOn())
+        {
+            targetRoom.TurnOffRoom();
+            Debug.Log(targetRoom.roomName + " dimatikan.");
+            return;
+        }
+
+        int activeCount = CountActiveRooms();
+
+        if (activeCount >= maxActiveRooms)
+        {
+            Debug.LogWarning("Tidak bisa menyalakan " + targetRoom.roomName +
+                "! Maksimal " + maxActiveRooms + " ruangan menyala secara bersamaan. Matikan ruangan lain terlebih dahulu.");
+            return;
+        }
+
+        targetRoom.TurnOnRoom();
+        Debug.Log(targetRoom.roomName + " dinyalakan.");
+    }
+
+    private int CountActiveRooms()
+    {
+        int count = 0;
+        foreach (Room room in rooms)
+        {
+            if (room.IsAnyLightOn()) count++;
+        }
+        return count;
     }
 }
