@@ -17,19 +17,17 @@ public class CameraFollowCursor : MonoBehaviour
 
     void Update()
     {
-        if (isLocked) return; // skip semua logic follow kalau lagi di-lock
+        if (isLocked) return;
 
-        Vector3 mouseScreenPos = Input.mousePosition;
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
-        mouseWorldPos.z = transform.position.z;
+        // Mouse di layar (-1..1), bukan world pos. Jadi maxDistanceX/Y benar-benar dipakai.
+        Vector3 viewport = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        float nx = (viewport.x - 0.5f) * 2f;
+        float ny = (viewport.y - 0.5f) * 2f;
 
-        Vector3 offset = mouseWorldPos - startPosition;
-        offset *= 0.5f;
-
-        offset.x = Mathf.Clamp(offset.x, -maxDistanceX, maxDistanceX);
-        offset.y = Mathf.Clamp(offset.y, -maxDistanceY, maxDistanceY);
-
-        Vector3 targetPos = startPosition + offset;
+        Vector3 targetPos = startPosition;
+        targetPos.x += Mathf.Clamp(nx, -1f, 1f) * maxDistanceX;
+        targetPos.y += Mathf.Clamp(ny, -1f, 1f) * maxDistanceY;
+        targetPos.z = transform.position.z;
 
         transform.position = Vector3.Lerp(transform.position, targetPos, smoothSpeed * Time.deltaTime);
     }

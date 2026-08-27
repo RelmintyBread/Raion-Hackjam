@@ -235,7 +235,7 @@ public class MonsterAI : MonoBehaviour
         }
 
         actionTimer += Time.deltaTime;
-        if (actionTimer > 6f)
+        if (actionTimer > 10f)
         {
             Debug.Log($"[MonsterAI] Attack '{targetRoom.roomName}' selesai (timeout). Attack -> Patrol.");
             ReturnToPatrol();
@@ -253,7 +253,17 @@ public class MonsterAI : MonoBehaviour
             return;
         }
 
-        // Tidak ada korban di ruangan ini — jangan nyangkut Attack
+        // Masih menuju ruangan — jangan batal Attack cuma karena belum ketemu korban.
+        Transform inside = GetAttackPoint(targetRoom);
+        if (!enteredRoom)
+        {
+            if (inside != null)
+                MoveTo(inside.position);
+            else if (targetDoor != null)
+                MoveTo(targetDoor.transform.position);
+            return;
+        }
+
         Debug.Log($"[MonsterAI] Tidak ada korban di '{targetRoom.roomName}'. Attack -> Patrol.");
         ReturnToPatrol();
     }
@@ -261,7 +271,7 @@ public class MonsterAI : MonoBehaviour
     void TryOpenNearbyDoor()
     {
         if (targetDoor == null || enteredRoom) return;
-        if (Vector2.Distance(transform.position, targetDoor.transform.position) > 1.6f && stuckTimer < 0.4f) return;
+        if (Vector2.Distance(transform.position, targetDoor.transform.position) > 2.5f) return;
 
         targetDoor.Interact();
         enteredRoom = true;

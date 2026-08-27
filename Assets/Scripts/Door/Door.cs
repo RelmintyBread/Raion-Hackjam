@@ -79,6 +79,12 @@ public class Door : MonoBehaviour, IInteractable
             if (col == null || col.isTrigger) continue;
             col.enabled = enabled;
         }
+
+        foreach (UnityEngine.Rendering.Universal.ShadowCaster2D shadow in GetComponentsInChildren<UnityEngine.Rendering.Universal.ShadowCaster2D>())
+        {
+            if (shadow != null)
+                shadow.enabled = enabled;
+        }
     }
 
 

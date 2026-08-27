@@ -7,11 +7,14 @@ public class RoomLight : MonoBehaviour
     [Header("Light Setup")]
     public Light2D lightSource;
     public float dimIntensity = 0.05f;
-    public float brightIntensity = 1f;
+    public float brightIntensity = 2f;
+    public float dimRadius = 1.2f;
+    public float onRadius = 16f;
 
     [Header("Power Limit")]
     public float maxDuration = 10f;
     [SerializeField] public float currentDuration;
+    public bool startOn = false;
 
     [Header("Events")]
     public UnityEvent OnPowerOut; // <-- muncul di Inspector, bisa drag target manual
@@ -24,9 +27,20 @@ public class RoomLight : MonoBehaviour
             lightSource = GetComponent<Light2D>();
 
         if (lightSource != null)
-            lightSource.intensity = dimIntensity;
+        {
+            lightSource.shadowsEnabled = true;
+            lightSource.shadowIntensity = 1f;
+            ApplyLight(false);
+        }
 
         currentDuration = maxDuration;
+        LightOccluders2D.Install();
+    }
+
+    void Start()
+    {
+        if (startOn)
+            TurnOn();
     }
 
     void Update()
@@ -53,14 +67,22 @@ public class RoomLight : MonoBehaviour
             return;
         }
 
-        lightSource.intensity = brightIntensity;
+        ApplyLight(true);
         isOn = true;
     }
 
     public void TurnOff()
     {
-        lightSource.intensity = dimIntensity;
+        ApplyLight(false);
         isOn = false;
+    }
+
+    void ApplyLight(bool on)
+    {
+        if (lightSource == null) return;
+        lightSource.intensity = on ? brightIntensity : dimIntensity;
+        lightSource.pointLightInnerRadius = on ? onRadius * 0.35f : 0f;
+        lightSource.pointLightOuterRadius = on ? onRadius : dimRadius;
     }
 
     public bool IsOn => isOn;

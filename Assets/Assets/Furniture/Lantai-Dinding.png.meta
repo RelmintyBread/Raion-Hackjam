@@ -1,0 +1,1430 @@
+fileFormatVersion: 2
+guid: 3f6c00aec94637c429de4e734f98395d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6756408954550011785
+    second: Lantai-Dinding_0
+  - first:
+      213: -4712388899358281284
+    second: Lantai-Dinding_1
+  - first:
+      213: -3995518807772785141
+    second: Lantai-Dinding_2
+  - first:
+      213: 6969804852772463384
+    second: Lantai-Dinding_3
+  - first:
+      213: -833567835065157336
+    second: Lantai-Dinding_4
+  - first:
+      213: -5494908401858012096
+    second: Lantai-Dinding_5
+  - first:
+      213: 2868076317294361465
+    second: Lantai-Dinding_6
+  - first:
+      213: 665977503924455122
+    second: Lantai-Dinding_7
+  - first:
+      213: 3274162655912201708
+    second: Lantai-Dinding_8
+  - first:
+      213: -4161895998577824269
+    second: Lantai-Dinding_9
+  - first:
+      213: 1968558960626223435
+    second: Lantai-Dinding_10
+  - first:
+      213: 5727925765518445706
+    second: Lantai-Dinding_11
+  - first:
+      213: -5069197527455848578
+    second: Lantai-Dinding_12
+  - first:
+      213: -3998268701946257815
+    second: Lantai-Dinding_13
+  - first:
+      213: 8983615377446118014
+    second: Lantai-Dinding_14
+  - first:
+      213: -870614670365851834
+    second: Lantai-Dinding_15
+  - first:
+      213: 7910981679649328723
+    second: Lantai-Dinding_16
+  - first:
+      213: 3545900296615133785
+    second: Lantai-Dinding_17
+  - first:
+      213: -3670774075739361346
+    second: Lantai-Dinding_18
+  - first:
+      213: 6498760226639192830
+    second: Lantai-Dinding_19
+  - first:
+      213: -7590677393849528357
+    second: Lantai-Dinding_20
+  - first:
+      213: -3699108882931745308
+    second: Lantai-Dinding_21
+  - first:
+      213: 7038981952628503945
+    second: Lantai-Dinding_22
+  - first:
+      213: -5280979210293369665
+    second: Lantai-Dinding_23
+  - first:
+      213: 6934763724331573811
+    second: Lantai-Dinding_24
+  - first:
+      213: -6541878677178800631
+    second: Lantai-Dinding_25
+  - first:
+      213: -8289201327224627262
+    second: Lantai-Dinding_26
+  - first:
+      213: -4456477272397151834
+    second: Lantai-Dinding_27
+  - first:
+      213: -1082335757076867242
+    second: Lantai-Dinding_28
+  - first:
+      213: -6926266309554527076
+    second: Lantai-Dinding_29
+  - first:
+      213: -2594221034308967748
+    second: Lantai-Dinding_30
+  - first:
+      213: -910623179821743129
+    second: Lantai-Dinding_31
+  - first:
+      213: -1301157010504150473
+    second: Lantai-Dinding_32
+  - first:
+      213: 7984586558449049238
+    second: Lantai-Dinding_33
+  - first:
+      213: -8407960841443088536
+    second: Lantai-Dinding_34
+  - first:
+      213: 6312031386103337593
+    second: Lantai-Dinding_35
+  - first:
+      213: 3110026494914914735
+    second: Lantai-Dinding_36
+  - first:
+      213: 8794726989072530243
+    second: Lantai-Dinding_37
+  - first:
+      213: -7081641368972972406
+    second: Lantai-Dinding_38
+  - first:
+      213: 2908656564867969018
+    second: Lantai-Dinding_39
+  - first:
+      213: -6645618191535577182
+    second: Lantai-Dinding_40
+  - first:
+      213: 7822531073972199903
+    second: Lantai-Dinding_41
+  - first:
+      213: -1655381586458093970
+    second: Lantai-Dinding_42
+  - first:
+      213: 2061243536356276016
+    second: Lantai-Dinding_43
+  - first:
+      213: 5943910112107211263
+    second: Lantai-Dinding_44
+  - first:
+      213: -3423691629679416169
+    second: Lantai-Dinding_45
+  - first:
+      213: 609590865354695830
+    second: Lantai-Dinding_46
+  - first:
+      213: -3660644174450362627
+    second: Lantai-Dinding_47
+  - first:
+      213: -7829126978303250896
+    second: Lantai-Dinding_48
+  - first:
+      213: 8336113470660376150
+    second: Lantai-Dinding_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lantai-Dinding_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 3409
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987c83da52693cd50800000000000000
+      internalID: 6756408954550011785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_1
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 3409
+        width: 326
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1714a634b3a9eb0800000000000000
+      internalID: -4712388899358281284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_2
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 3409
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b069f4140d01d88c0800000000000000
+      internalID: -3995518807772785141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_3
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 3409
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 813eb430698b9b060800000000000000
+      internalID: 6969804852772463384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_4
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 3409
+        width: 331
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829ffbe68729e64f0800000000000000
+      internalID: -833567835065157336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_5
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 3409
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04c91f9fbe92eb3b0800000000000000
+      internalID: -5494908401858012096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_6
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 3054
+        width: 421
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b7a0107347dc720800000000000000
+      internalID: 2868076317294361465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_7
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 3054
+        width: 326
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d681d5e2070e3900800000000000000
+      internalID: 665977503924455122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_8
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 3054
+        width: 421
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced0f7a9699207d20800000000000000
+      internalID: 3274162655912201708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_9
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 3054
+        width: 421
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd26a4d3a9fd36c0800000000000000
+      internalID: -4161895998577824269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_10
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 3054
+        width: 326
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49c98fd1f9b15b10800000000000000
+      internalID: 1968558960626223435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_11
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 3054
+        width: 421
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8cc889c22ead7f40800000000000000
+      internalID: 5727925765518445706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_12
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 2604
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77a4bfd4b796a9b0800000000000000
+      internalID: -5069197527455848578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_13
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 2604
+        width: 326
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e5eef9ccb4388c0800000000000000
+      internalID: -3998268701946257815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_14
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 2604
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e72a96ba6963cac70800000000000000
+      internalID: 8983615377446118014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_15
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 2604
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f799ce194fae3f0800000000000000
+      internalID: -870614670365851834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_16
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 2604
+        width: 331
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e0f186ce379cd60800000000000000
+      internalID: 7910981679649328723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_17
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 2604
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95282b46881953130800000000000000
+      internalID: 3545900296615133785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_18
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 2154
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebfa7dc3d6ace0dc0800000000000000
+      internalID: -3670774075739361346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_19
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 2154
+        width: 326
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef224458efb303a50800000000000000
+      internalID: 6498760226639192830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_20
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 2154
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdfc20f902f78a690800000000000000
+      internalID: -7590677393849528357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_21
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 2159
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ed7c57d1102aacc0800000000000000
+      internalID: -3699108882931745308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_22
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 2159
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985bec2bacc7fa160800000000000000
+      internalID: 7038981952628503945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_23
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 2159
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb4ad38536136b6b0800000000000000
+      internalID: -5280979210293369665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_24
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 2159
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3326c068dda3d3060800000000000000
+      internalID: 6934763724331573811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_25
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 2159
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9062e03e0049635a0800000000000000
+      internalID: -6541878677178800631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_26
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 2159
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf541b9f47d6fc80800000000000000
+      internalID: -8289201327224627262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_27
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1799
+        width: 421
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a18a2d38896722c0800000000000000
+      internalID: -4456477272397151834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_28
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1799
+        width: 326
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657dab70d55caf0f0800000000000000
+      internalID: -1082335757076867242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_29
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1799
+        width: 421
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c942f370d75f0ef90800000000000000
+      internalID: -6926266309554527076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_30
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1709
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb2ea2dc6b97ffbd0800000000000000
+      internalID: -2594221034308967748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_31
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1709
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e30d7aea01dc53f0800000000000000
+      internalID: -910623179821743129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_32
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 1709
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73214efb79c51fde0800000000000000
+      internalID: -1301157010504150473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_33
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 1709
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ed6b6bb23fece60800000000000000
+      internalID: 7984586558449049238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_34
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 1709
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867e368792ce05b80800000000000000
+      internalID: -8407960841443088536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_35
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 1709
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9725ec36a17d89750800000000000000
+      internalID: 6312031386103337593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_36
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1349
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9e4779e98092b20800000000000000
+      internalID: 3110026494914914735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_37
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1349
+        width: 326
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34b7530a9952d0a70800000000000000
+      internalID: 8794726989072530243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_38
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1349
+        width: 421
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8ea7afe1b4f8bd90800000000000000
+      internalID: -7081641368972972406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_39
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1574
+        width: 326
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff209a2cbf9d5820800000000000000
+      internalID: 2908656564867969018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_40
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1349
+        width: 101
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a7e5acf67506c3a0800000000000000
+      internalID: -6645618191535577182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_41
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 1574
+        width: 326
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd16194f0963f8c60800000000000000
+      internalID: 7822531073972199903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_42
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 1349
+        width: 101
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66517bb737e609e0800000000000000
+      internalID: -1655381586458093970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_43
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 1574
+        width: 326
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 037f51c43120b9c10800000000000000
+      internalID: 2061243536356276016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_44
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 434
+        width: 326
+        height: 1121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9a00931c20d7250800000000000000
+      internalID: 5943910112107211263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_45
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 439
+        width: 326
+        height: 1121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79cea703a9a9c70d0800000000000000
+      internalID: -3423691629679416169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_46
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 434
+        width: 326
+        height: 1121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6942acb89a3b57800800000000000000
+      internalID: 609590865354695830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_47
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 69
+        width: 326
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df678cca487c23dc0800000000000000
+      internalID: -3660644174450362627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_48
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 69
+        width: 326
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03eaec46e7a595390800000000000000
+      internalID: -7829126978303250896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantai-Dinding_49
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 69
+        width: 326
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6567f02f803dfa370800000000000000
+      internalID: 8336113470660376150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lantai-Dinding_0: 6756408954550011785
+      Lantai-Dinding_1: -4712388899358281284
+      Lantai-Dinding_10: 1968558960626223435
+      Lantai-Dinding_11: 5727925765518445706
+      Lantai-Dinding_12: -5069197527455848578
+      Lantai-Dinding_13: -3998268701946257815
+      Lantai-Dinding_14: 8983615377446118014
+      Lantai-Dinding_15: -870614670365851834
+      Lantai-Dinding_16: 7910981679649328723
+      Lantai-Dinding_17: 3545900296615133785
+      Lantai-Dinding_18: -3670774075739361346
+      Lantai-Dinding_19: 6498760226639192830
+      Lantai-Dinding_2: -3995518807772785141
+      Lantai-Dinding_20: -7590677393849528357
+      Lantai-Dinding_21: -3699108882931745308
+      Lantai-Dinding_22: 7038981952628503945
+      Lantai-Dinding_23: -5280979210293369665
+      Lantai-Dinding_24: 6934763724331573811
+      Lantai-Dinding_25: -6541878677178800631
+      Lantai-Dinding_26: -8289201327224627262
+      Lantai-Dinding_27: -4456477272397151834
+      Lantai-Dinding_28: -1082335757076867242
+      Lantai-Dinding_29: -6926266309554527076
+      Lantai-Dinding_3: 6969804852772463384
+      Lantai-Dinding_30: -2594221034308967748
+      Lantai-Dinding_31: -910623179821743129
+      Lantai-Dinding_32: -1301157010504150473
+      Lantai-Dinding_33: 7984586558449049238
+      Lantai-Dinding_34: -8407960841443088536
+      Lantai-Dinding_35: 6312031386103337593
+      Lantai-Dinding_36: 3110026494914914735
+      Lantai-Dinding_37: 8794726989072530243
+      Lantai-Dinding_38: -7081641368972972406
+      Lantai-Dinding_39: 2908656564867969018
+      Lantai-Dinding_4: -833567835065157336
+      Lantai-Dinding_40: -6645618191535577182
+      Lantai-Dinding_41: 7822531073972199903
+      Lantai-Dinding_42: -1655381586458093970
+      Lantai-Dinding_43: 2061243536356276016
+      Lantai-Dinding_44: 5943910112107211263
+      Lantai-Dinding_45: -3423691629679416169
+      Lantai-Dinding_46: 609590865354695830
+      Lantai-Dinding_47: -3660644174450362627
+      Lantai-Dinding_48: -7829126978303250896
+      Lantai-Dinding_49: 8336113470660376150
+      Lantai-Dinding_5: -5494908401858012096
+      Lantai-Dinding_6: 2868076317294361465
+      Lantai-Dinding_7: 665977503924455122
+      Lantai-Dinding_8: 3274162655912201708
+      Lantai-Dinding_9: -4161895998577824269
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
