@@ -1,104 +1,68 @@
+using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+/// <summary>
+/// Attach this to the HINGE object (the parent). Put your door sprite as a
+/// child, offset from this object's origin, so rotating this transform
+/// swings the door around its edge instead of its center.
+/// </summary>
 public class Door : MonoBehaviour
 {
-    [Header("Open")]
-    public float openTorque = 12f;
-    public float maxOpenAngle = 90f;
+    [Header("Rotation")]
+    public float openAngle = 90f;
+    public float openDuration = 0.6f;   // seconds to swing fully open/closed
     public bool clockwise = false;
 
-    [Header("Feel")]
-    public float angularDamping = 2f;
-
-    private Rigidbody2D rb;
-    private float startAngle;
-    private bool isOpening;
+    private float closedZ;
     private bool isOpen;
+    private Coroutine rotateRoutine;
 
-    public bool IsOpening => isOpening;
     public bool IsOpen => isOpen;
-
-    float Direction => clockwise ? -1f : 1f;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        SetupRigidbody();
+        closedZ = transform.eulerAngles.z;
     }
 
-    void SetupRigidbody()
+    public void Open()
     {
-        rb.gravityScale = 0f;
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
-        rb.centerOfMass = Vector2.zero;
-        rb.angularDamping = angularDamping;
-        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-    }
-
-    public void TryOpen(Collider2D opener = null)
-    {
-        if (isOpening || isOpen)
-            return;
-
-        isOpening = true;
-        startAngle = rb.rotation;
-        rb.constraints = RigidbodyConstraints2D.FreezePosition;
-
-        if (opener != null)
-            IgnoreOpener(opener);
-
-        Debug.Log(name + ": monster membuka pintu.");
-    }
-
-    void FixedUpdate()
-    {
-        if (!isOpening || isOpen)
-            return;
-
-        float targetAngle = startAngle + maxOpenAngle * Direction;
-        float remaining = Mathf.DeltaAngle(rb.rotation, targetAngle);
-
-        if (Mathf.Abs(remaining) <= 1f)
-        {
-            FinishOpen(targetAngle);
-            return;
-        }
-
-        rb.AddTorque(openTorque * Direction);
-    }
-
-    void FinishOpen(float targetAngle)
-    {
-        isOpening = false;
+        if (isOpen) return;
         isOpen = true;
-        rb.angularVelocity = 0f;
-        rb.SetRotation(targetAngle);
-        rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
-        Debug.Log(name + ": pintu terbuka.");
+
+        float targetZ = closedZ + openAngle * (clockwise ? -1f : 1f);
+        StartRotation(targetZ);
     }
 
-    void IgnoreOpener(Collider2D opener)
+    public void Close()
     {
-        Collider2D[] cols = GetComponentsInChildren<Collider2D>();
-        foreach (Collider2D col in cols)
+        if (!isOpen) return;
+        isOpen = false;
+
+        StartRotation(closedZ);
+    }
+
+    void StartRotation(float targetZ)
+    {
+        if (rotateRoutine != null)
+            StopCoroutine(rotateRoutine);
+
+        rotateRoutine = StartCoroutine(RotateTo(targetZ));
+    }
+
+    IEnumerator RotateTo(float targetZ)
+    {
+        float startZ = transform.eulerAngles.z;
+        float t = 0f;
+
+        while (t < 1f)
         {
-            if (col != null)
-                Physics2D.IgnoreCollision(col, opener, true);
+            t += Time.deltaTime / openDuration;
+            float z = Mathf.LerpAngle(startZ, targetZ, t);
+            transform.eulerAngles = new Vector3(0f, 0f, z);
+            yield return null;
         }
-    }
 
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, 0.12f);
-
-        Vector3 closedDir = transform.right;
-        Vector3 openDir = Quaternion.Euler(0f, 0f, maxOpenAngle * Direction) * closedDir;
-        Gizmos.DrawLine(transform.position, transform.position + closedDir * 0.6f);
-
-        Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, transform.position + openDir * 0.6f);
+        transform.eulerAngles = new Vector3(0f, 0f, targetZ);
+        rotateRoutine = null;
     }
 }
