@@ -6,7 +6,7 @@ using UnityEngine;
 /// child, offset from this object's origin, so rotating this transform
 /// swings the door around its edge instead of its center.
 /// </summary>
-public class Door : MonoBehaviour
+public class Door : MonoBehaviour, IInteractable
 {
     [Header("Rotation")]
     public float openAngle = 90f;
@@ -48,6 +48,16 @@ public class Door : MonoBehaviour
 
         rotateRoutine = StartCoroutine(RotateTo(targetZ));
     }
+
+    public void Interact()
+    {
+        if (!gameObject.activeSelf)
+            gameObject.SetActive(true);
+
+        Open();
+    }
+
+
 
     IEnumerator RotateTo(float targetZ)
     {

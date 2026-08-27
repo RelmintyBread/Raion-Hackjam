@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
 
 public class RoomLight : MonoBehaviour
@@ -9,8 +10,11 @@ public class RoomLight : MonoBehaviour
     public float brightIntensity = 1f;
 
     [Header("Power Limit")]
-    public float maxDuration = 10f;      // batas maksimal lampu boleh nyala (detik)
-    public float currentDuration;         // sisa waktu nyala saat ini
+    public float maxDuration = 10f;
+    [SerializeField] public float currentDuration;
+
+    [Header("Events")]
+    public UnityEvent OnPowerOut; // <-- muncul di Inspector, bisa drag target manual
 
     private bool isOn = false;
 
@@ -22,7 +26,7 @@ public class RoomLight : MonoBehaviour
         if (lightSource != null)
             lightSource.intensity = dimIntensity;
 
-        currentDuration = maxDuration; // mulai penuh
+        currentDuration = maxDuration;
     }
 
     void Update()
@@ -36,6 +40,7 @@ public class RoomLight : MonoBehaviour
                 currentDuration = 0f;
                 TurnOff();
                 Debug.Log(gameObject.name + " mati otomatis karena daya habis!");
+                OnPowerOut?.Invoke();
             }
         }
     }
