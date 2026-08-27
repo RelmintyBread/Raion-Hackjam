@@ -11,6 +11,8 @@ public class Room : MonoBehaviour
     [Header("Events")]
     public UnityEvent OnRoomPowerOut; // <-- ini juga muncul di Inspector
 
+    [HideInInspector] public bool monsterCleared;
+
     void Awake()
     {
         foreach (RoomLight light in lights)

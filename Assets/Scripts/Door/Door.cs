@@ -15,9 +15,11 @@ public class Door : MonoBehaviour, IInteractable
 
     private float closedZ;
     private bool isOpen;
+    private bool stayOpen;
     private Coroutine rotateRoutine;
 
     public bool IsOpen => isOpen;
+    public bool StayOpen => stayOpen;
 
     void Awake()
     {
@@ -27,22 +29,37 @@ public class Door : MonoBehaviour, IInteractable
     public void Open()
     {
         if (isOpen) return;
-        isOpen = true;
+        if (!EnsureActive()) return;
 
+        isOpen = true;
+        SetBlockingColliders(false);
         float targetZ = closedZ + openAngle * (clockwise ? -1f : 1f);
         StartRotation(targetZ);
     }
 
     public void Close()
     {
+        if (stayOpen) return;
         if (!isOpen) return;
-        isOpen = false;
+        if (!EnsureActive()) return;
 
+        isOpen = false;
+        SetBlockingColliders(true);
         StartRotation(closedZ);
+    }
+
+    bool EnsureActive()
+    {
+        if (!gameObject.activeSelf)
+            gameObject.SetActive(true);
+
+        return isActiveAndEnabled;
     }
 
     void StartRotation(float targetZ)
     {
+        if (!isActiveAndEnabled) return;
+
         if (rotateRoutine != null)
             StopCoroutine(rotateRoutine);
 
@@ -51,10 +68,17 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (!gameObject.activeSelf)
-            gameObject.SetActive(true);
-
+        stayOpen = true;
         Open();
+    }
+
+    void SetBlockingColliders(bool enabled)
+    {
+        foreach (Collider2D col in GetComponentsInChildren<Collider2D>())
+        {
+            if (col == null || col.isTrigger) continue;
+            col.enabled = enabled;
+        }
     }
 
 

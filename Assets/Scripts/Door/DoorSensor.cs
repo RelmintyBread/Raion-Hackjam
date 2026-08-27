@@ -19,6 +19,8 @@ public class DoorSensor : MonoBehaviour
     [Tooltip("If true, the door closes again once the monster leaves the sensor zone.")]
     public bool closeWhenEmpty = true;
 
+    int occupants;
+
     void Reset()
     {
         GetComponent<BoxCollider2D>().isTrigger = true;
@@ -26,17 +28,19 @@ public class DoorSensor : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (door == null) return;
+        if (door == null || !other.CompareTag(enemyTag)) return;
 
-        if (other.CompareTag(enemyTag))
-            door.Open();
+        occupants++;
+        door.Open();
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (door == null || !closeWhenEmpty) return;
+        if (door == null || !other.CompareTag(enemyTag)) return;
 
-        if (other.CompareTag(enemyTag))
-            door.Close();
+        occupants = Mathf.Max(0, occupants - 1);
+        if (occupants > 0 || !closeWhenEmpty || door.StayOpen) return;
+
+        door.Close();
     }
 }
