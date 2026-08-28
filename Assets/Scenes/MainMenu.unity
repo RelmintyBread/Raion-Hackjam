@@ -2473,7 +2473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd3bfadfdfdba14bbfe8dc9a9dddf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameSceneName: Tes
+  gameSceneName: GamePlay
   buttonClickSFX:
     _entity: {fileID: 11400000, guid: da5493ab32b78f8468bb8d95d3bf7e16, type: 2}
     ID: 0

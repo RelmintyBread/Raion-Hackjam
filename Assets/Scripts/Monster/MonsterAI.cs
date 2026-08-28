@@ -22,6 +22,7 @@ public class MonsterAI : MonoBehaviour
     public float investigateWaitTime = 1f;
 
     private NavMeshAgent agent;
+    private EntityAnimatorController animController;
     private State currentState = State.Patrol;
 
     private int currentPointIndex = 0;
@@ -42,6 +43,7 @@ public class MonsterAI : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        animController = GetComponent<EntityAnimatorController>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.autoBraking = false;
@@ -66,7 +68,7 @@ public class MonsterAI : MonoBehaviour
 
     void Update()
     {
-        FlipSprite();
+        UpdateAnimator();
         CheckDarkRooms();
 
         switch (currentState)
@@ -151,6 +153,15 @@ public class MonsterAI : MonoBehaviour
                 currentPointIndex = (currentPointIndex + 1) % patrolPoints.Length;
                 agent.SetDestination(patrolPoints[currentPointIndex].position);
             }
+            return;
+        }
+
+        // Path invalid/partial -> destination gak bisa dicapai, langsung skip ke titik berikutnya
+        if (agent.enabled && agent.isOnNavMesh && !agent.pathPending &&
+            agent.pathStatus != NavMeshPathStatus.PathComplete)
+        {
+            currentPointIndex = (currentPointIndex + 1) % patrolPoints.Length;
+            agent.SetDestination(patrolPoints[currentPointIndex].position);
             return;
         }
 
@@ -438,6 +449,18 @@ public class MonsterAI : MonoBehaviour
             scale.x = Mathf.Sign(vx) * Mathf.Abs(scale.x);
             transform.localScale = scale;
         }
+    }
+
+    // Ngasih tau EntityAnimatorController arah gerak monster berdasarkan velocity NavMeshAgent,
+    // supaya Blend Tree (Horizontal/Vertical/Speed) otomatis milih animasi walk yang benar.
+    void UpdateAnimator()
+    {
+        if (animController == null) return;
+
+        Vector2 velocity = agent.enabled ? (Vector2)agent.velocity : Vector2.zero;
+        bool isMoving = velocity.sqrMagnitude > 0.02f;
+
+        animController.UpdateAnimationDirection(velocity, isMoving);
     }
 
     void OnDrawGizmos()
