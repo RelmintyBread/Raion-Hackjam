@@ -9,6 +9,7 @@ public class AudioSystem : SingletonMonoBehaviour<AudioSystem>
 
     [Header("SFX")]
     public SoundID sfx_flashlight;
+    public SoundID sfx_doorbreak;
 
     [Range(0f, 1f)] public float defaultMaster = 0.5f;
     [Range(0f, 1f)] public float defaultBGM = 0.5f;
