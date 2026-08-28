@@ -9,15 +9,24 @@ public class PowerControlSystem : MonoBehaviour
     [Header("Limit")]
     public int maxActiveRooms = 2;
 
+    [Header("Energy (Shared Pool - sesuai GDD)")]
+    public float totalEnergy = 840f;
+    [SerializeField] private float currentEnergy;
+
     [Header("UI Panel")]
     public GameObject controlPanelUI;
     public Button[] roomButtons;
     public Button closeButton;
 
     [Header("Camera")]
-    public CameraFollowCursor cameraFollow; // drag Main Camera ke sini
+    public CameraFollowCursor cameraFollow;
 
     private bool panelOpen = false;
+
+    void Awake()
+    {
+        currentEnergy = totalEnergy;
+    }
 
     void Start()
     {
@@ -33,6 +42,34 @@ public class PowerControlSystem : MonoBehaviour
         if (closeButton != null)
             closeButton.onClick.AddListener(ClosePanel);
     }
+
+    void Update()
+    {
+        int activeCount = CountActiveRooms();
+        if (activeCount <= 0) return;
+
+        currentEnergy -= activeCount * Time.deltaTime;
+
+        if (currentEnergy <= 0f)
+        {
+            currentEnergy = 0f;
+            ForceShutdownAllRooms();
+        }
+    }
+
+    void ForceShutdownAllRooms()
+    {
+        foreach (Room room in rooms)
+        {
+            if (room.IsAnyLightOn())
+                room.TurnOffRoom();
+        }
+        Debug.Log("[PowerControlSystem] Energi habis! Semua ruangan dimatikan paksa.");
+    }
+
+    public float GetEnergyPercent() => currentEnergy / totalEnergy;
+    public float GetCurrentEnergy() => currentEnergy;
+
 
     void OnMouseDown()
     {
