@@ -1199,6 +1199,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   monsterTag: Enemy
+  chainKill: 1
 --- !u!50 &254822186
 Rigidbody2D:
   serializedVersion: 5
@@ -2610,6 +2611,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   monsterTag: Enemy
+  chainKill: 1
 --- !u!50 &408574977
 Rigidbody2D:
   serializedVersion: 5
@@ -2789,11 +2791,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07614e336b8751a41b29b7daf29f5502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FamilyMember
-  room: {fileID: 7187919}
+  room: {fileID: 73893144}
   OnKilled:
     m_PersistentCalls:
       m_Calls: []
   monsterTag: Enemy
+  chainKill: 1
 --- !u!50 &411236474
 Rigidbody2D:
   serializedVersion: 5
@@ -15003,6 +15006,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   monsterTag: Enemy
+  chainKill: 1
 --- !u!50 &511021750
 Rigidbody2D:
   serializedVersion: 5

@@ -7,6 +7,8 @@ public class FamilyMember : MonoBehaviour
     public Room room;
     public UnityEvent OnKilled;
     public string monsterTag = "Enemy";
+    [Tooltip("Kalau true, membunuh orang lain di ruangan yang sama (ayah+ibu). Matikan di Player.")]
+    public bool chainKill = true;
 
     bool dead;
 
@@ -23,10 +25,13 @@ public class FamilyMember : MonoBehaviour
         if (col != null)
             col.isTrigger = true;
 
+        if (gameObject.name == "Player")
+            chainKill = false;
+
         if (room == null)
             room = GetComponentInParent<Room>();
 
-        if (room == null)
+        if (room == null && chainKill)
             room = FindNearestRoom();
     }
 
@@ -72,21 +77,21 @@ public class FamilyMember : MonoBehaviour
         OnKilled?.Invoke();
 
         Room r = room;
-        Vector3 pos = transform.position;
         Destroy(gameObject);
 
-        foreach (FamilyMember member in FindObjectsByType<FamilyMember>())
+        if (chainKill && r != null)
         {
-            if (member == null || member == this || !member.IsAlive) continue;
-
-            bool sameRoom = (r != null && member.IsInRoom(r))
-                || Vector2.Distance(member.transform.position, pos) < 8f;
-            if (sameRoom)
+            foreach (FamilyMember member in FindObjectsByType<FamilyMember>())
+            {
+                if (member == null || member == this || !member.IsAlive) continue;
+                if (!member.chainKill) continue;
+                if (member.room != r) continue;
                 member.Kill();
-        }
+            }
 
-        if (r != null && !HasAliveInRoom(r))
-            r.monsterCleared = true;
+            if (!HasAliveInRoom(r))
+                r.monsterCleared = true;
+        }
     }
 
     public bool BelongsTo(Room target)
