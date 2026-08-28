@@ -31,7 +31,12 @@ public class DoorSensor : MonoBehaviour
         if (door == null || !other.CompareTag(enemyTag)) return;
 
         occupants++;
-        door.Open();
+        if (occupants == 1)
+        {
+            door.Open();
+            if (AudioSystem.Instance != null)
+                AudioSystem.Instance.PlayAudio(AudioSystem.Instance.sfx_doorbreak);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)

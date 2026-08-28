@@ -45,6 +45,8 @@ public class RoomLight : MonoBehaviour
 
     void Update()
     {
+        if (CutsceneManager.IsPlaying) return;
+
         if (isOn)
         {
             currentDuration -= Time.deltaTime;

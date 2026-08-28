@@ -43,6 +43,7 @@ public class LightProgressBar : MonoBehaviour
 
     void Update()
     {
+        if (CutsceneManager.IsPlaying) return;
         if (targetLight == null || durationSlider == null) return;
 
         float percent = targetLight.GetDurationPercent();

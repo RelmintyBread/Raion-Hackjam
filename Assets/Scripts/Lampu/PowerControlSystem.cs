@@ -73,6 +73,8 @@ public class PowerControlSystem : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (CutsceneManager.IsPlaying) return;
+
         if (panelOpen) ClosePanel();
         else OpenPanel();
     }

@@ -68,6 +68,8 @@ public class MonsterAI : MonoBehaviour
 
     void Update()
     {
+        if (CutsceneManager.IsPlaying) return;
+
         UpdateAnimator();
         CheckDarkRooms();
 

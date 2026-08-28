@@ -10,6 +10,10 @@ public class FamilyMember : MonoBehaviour
     [Tooltip("Kalau true, membunuh orang lain di ruangan yang sama (ayah+ibu). Matikan di Player.")]
     public bool chainKill = true;
 
+    public enum DeathEnding { Player, Adik, OrangTua }
+    [Tooltip("Ending yang dipicu kalau orang ini mati")]
+    public DeathEnding deathEnding = DeathEnding.Player;
+
     bool dead;
 
     public bool IsAlive => !dead;
@@ -25,7 +29,7 @@ public class FamilyMember : MonoBehaviour
         if (col != null)
             col.isTrigger = true;
 
-        if (gameObject.name == "Player")
+        if (IsPlayerObject())
             chainKill = false;
 
         if (room == null)
@@ -76,6 +80,10 @@ public class FamilyMember : MonoBehaviour
         dead = true;
         OnKilled?.Invoke();
 
+        CutsceneManager cutscene = FindAnyObjectByType<CutsceneManager>();
+        if (cutscene != null)
+            cutscene.PlayEnding(ResolveDeathEnding());
+
         Room r = room;
         Destroy(gameObject);
 
@@ -92,6 +100,26 @@ public class FamilyMember : MonoBehaviour
             if (!HasAliveInRoom(r))
                 r.monsterCleared = true;
         }
+    }
+
+    public DeathEnding ResolveDeathEnding()
+    {
+        string n = gameObject.name;
+        if (ContainsIgnoreCase(n, "Adik")) return DeathEnding.Adik;
+        if (ContainsIgnoreCase(n, "Ayah") || ContainsIgnoreCase(n, "Ibu")) return DeathEnding.OrangTua;
+        if (IsPlayerObject()) return DeathEnding.Player;
+        return deathEnding;
+    }
+
+    bool IsPlayerObject()
+    {
+        string n = gameObject.name;
+        return ContainsIgnoreCase(n, "Player") || n == "MC" || ContainsIgnoreCase(n, "MC (");
+    }
+
+    static bool ContainsIgnoreCase(string value, string part)
+    {
+        return value.IndexOf(part, System.StringComparison.OrdinalIgnoreCase) >= 0;
     }
 
     public bool BelongsTo(Room target)

@@ -24,6 +24,8 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
+        if (CutsceneManager.IsPlaying) return;
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (IsPaused)

@@ -8,28 +8,51 @@ public class CameraFollowCursor : MonoBehaviour
 
     private Vector3 startPosition;
 
-    [HideInInspector] public bool isLocked = false; // kalau true, kamera berhenti ngikutin cursor
+    [HideInInspector] public bool isLocked = false;
+    Transform followTarget;
 
     void Start()
     {
         startPosition = transform.position;
     }
 
-    void Update()
+    void LateUpdate()
     {
+        Vector3 targetPos;
+
+        if (followTarget != null)
+        {
+            targetPos = followTarget.position;
+            targetPos.z = transform.position.z;
+            transform.position = Vector3.Lerp(transform.position, targetPos, smoothSpeed * Time.unscaledDeltaTime);
+            return;
+        }
+
         if (isLocked) return;
 
-        // Mouse di layar (-1..1), bukan world pos. Jadi maxDistanceX/Y benar-benar dipakai.
         Vector3 viewport = Camera.main.ScreenToViewportPoint(Input.mousePosition);
         float nx = (viewport.x - 0.5f) * 2f;
         float ny = (viewport.y - 0.5f) * 2f;
 
-        Vector3 targetPos = startPosition;
+        targetPos = startPosition;
         targetPos.x += Mathf.Clamp(nx, -1f, 1f) * maxDistanceX;
         targetPos.y += Mathf.Clamp(ny, -1f, 1f) * maxDistanceY;
         targetPos.z = transform.position.z;
 
         transform.position = Vector3.Lerp(transform.position, targetPos, smoothSpeed * Time.deltaTime);
+    }
+
+    public void LockToTarget(Transform target)
+    {
+        followTarget = target;
+        isLocked = true;
+    }
+
+    public void FollowMouse()
+    {
+        followTarget = null;
+        isLocked = false;
+        startPosition = transform.position;
     }
 
     public void LockCamera()
